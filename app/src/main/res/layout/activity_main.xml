@@ -1,20 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background= "#CD7391">
+    tools:context=".ProfileFragment"
+    android:background="#FFF7DA">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="CHOOSE YOUR ROLE\n अपनी भूमिका चुनें"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/bg_3"
+            android:layout_margin="15dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/customer"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Customer\nग्राहक"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_marginTop="100dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/bg_1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+        <TextView
+            android:id="@+id/vendor"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Vendor\nविक्रेता"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/bg_1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

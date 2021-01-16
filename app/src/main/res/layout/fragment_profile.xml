@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment">
 
     <LinearLayout
@@ -14,7 +13,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="EDIT PROFILE"
+            android:text="USER PROFILE"
+            android:textColor="@color/black"
             android:textSize="22dp"
             android:layout_marginBottom="40dp"
             android:textStyle="bold"
@@ -28,32 +28,21 @@
             android:layout_gravity="center_horizontal"/>
 
         <Button
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
+            android:layout_marginTop="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_1"
             android:textSize="18dp"
+            android:layout_gravity="center_horizontal"
             android:id="@+id/acc"
             android:text="Account" />
+
         <Button
             android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:background="@drawable/bg_1"
-            android:text="Address" />
-        <Button
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_1"
-            android:textSize="18dp"
-            android:text="Settings"/>
-        <Button
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_1"
+            android:layout_gravity="center_horizontal"
             android:textSize="18dp"
             android:text="Logout"/>
 

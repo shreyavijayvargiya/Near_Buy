@@ -1,5 +1,6 @@
 package com.example.nearbuy;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -46,7 +47,8 @@ public class Splash extends AppCompatActivity {
         slideToActView.setOnSlideCompleteListener(new SlideToActView.OnSlideCompleteListener() {
             @Override
             public void onSlideComplete(SlideToActView slideToActView) {
-                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                Intent i = new Intent(Splash.this, MainActivity.class);
+                startActivity(i);
                 finish();
             }
         });

@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -23,60 +25,34 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<AuthUI.IdpConfig> providers;
-    public static final int RC_SIGN_IN = 1;
-    private static final String ANONYMOUS = "anonymous";
-    private FirebaseAuth mFirebaseAuth;
-    private FirebaseDatabase mFirebaseDatabase;
-    private FirebaseAuth.AuthStateListener mAuthStateListener;
-    private String mUsername;
+   TextView tv1, tv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_home);
+        setContentView(R.layout.activity_main);
+        tv1= findViewById(R.id.customer);
+        tv2= findViewById(R.id.vendor);
 
-        //init providers
-        providers= Arrays.asList(
-
-              new AuthUI.IdpConfig.GoogleBuilder().build(),
-              new AuthUI.IdpConfig.EmailBuilder().build());
-
-        showSignInOptions();
-
-
-    }
-
-    private void showSignInOptions() {
-        startActivityForResult(
-                AuthUI.getInstance().createSignInIntentBuilder()
-                .setAvailableProviders(providers)
-                .build(), RC_SIGN_IN
-        );
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode== RC_SIGN_IN){
-            if(resultCode== RESULT_OK){
-                FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-                Toast.makeText(this, "You are Signed in", Toast.LENGTH_SHORT).show();
+        tv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i1 = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(i1);
             }
-            else if(resultCode== RESULT_CANCELED){
-                Toast.makeText(this, "Sign in Cancelled!", Toast.LENGTH_SHORT).show();
-                finish();
+        });
+
+        tv2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent(MainActivity.this, VendorActivity.class);
+                startActivity(i2);
             }
-        }
-    }
+        });
 
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
+
     }
 
 }

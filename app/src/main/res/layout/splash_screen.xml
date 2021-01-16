@@ -15,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_gravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="100dp"
         >
 
     </ImageView>

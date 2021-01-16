@@ -77,7 +77,7 @@ public class CreateAccActivity<FirebaseFirestore> extends AppCompatActivity impl
         String address = editTextAddress.getText().toString().trim();
         if (!validateInputs(name, mail, phone, address)) {
 
-           CollectionReference dbProducts = db.collection("User");
+          // CollectionReference dbProducts = db.collection("User");
 
             User user = new User(
                     name,
@@ -85,19 +85,19 @@ public class CreateAccActivity<FirebaseFirestore> extends AppCompatActivity impl
                     phone,
                     address
             );
-            dbProducts.add(user)
-                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                        @Override
-                        public void onSuccess(DocumentReference documentReference) {
-                            Toast.makeText(CreateAccActivity.this, "Product Added", Toast.LENGTH_LONG).show();
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(CreateAccActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    });
+           // dbProducts.add(user)
+                   // .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                       // @Override
+                        //public void onSuccess(DocumentReference documentReference) {
+                           // Toast.makeText(CreateAccActivity.this, "Product Added", Toast.LENGTH_LONG).show();
+                        //}
+                    //})
+                    //.addOnFailureListener(new OnFailureListener() {
+                     //   @Override
+                       // public void onFailure(@NonNull Exception e) {
+                            //Toast.makeText(CreateAccActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                       // }
+                   // });
 
     }
 }}
