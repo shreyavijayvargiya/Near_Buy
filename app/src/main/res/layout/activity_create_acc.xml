@@ -55,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Name"
+            android:id="@+id/name"
             android:textSize="18sp">
 
         </EditText>
@@ -73,6 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter email"
+            android:id="@+id/mail"
             android:inputType="textEmailAddress"
             android:textSize="18sp">
 
@@ -92,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Number"
+            android:id="@+id/phone"
             android:inputType="phone"
             android:textSize="18sp">
 
@@ -111,6 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter address"
+            android:id="@+id/address"
             android:inputType="textMultiLine"
             android:textSize="18sp">
 
@@ -128,6 +132,7 @@
         android:layout_marginTop="28dp"
         android:paddingTop="10dp"
         android:text="Create account"
+        android:id="@+id/create"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
