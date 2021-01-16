@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        app:cnb_backgroundColor="@color/mauve"
+        app:cnb_textColor="#fff"
+        app:cnb_iconColor="#fff"/>
+    <item
+        android:id="@+id/near"
+        android:title="Near Me"
+        app:cnb_backgroundColor="@color/mauve"
+        app:cnb_textColor="#fff"
+        app:cnb_iconColor="#fff"
+        android:icon="@drawable/ic_baseline_location_on_24"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        app:cnb_backgroundColor="@color/mauve"
+        app:cnb_textColor="#fff"
+        app:cnb_iconColor="#fff"
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
+
+</menu>

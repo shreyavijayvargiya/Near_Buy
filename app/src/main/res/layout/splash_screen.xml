@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_marginTop="200dp"
+        android:layout_width="185dp"
+        android:layout_height="199dp"
+        android:id="@+id/splash_image"
+        android:src="@drawable/splash_screen_image"
+        app:layout_constraintBottom_toTopOf="@+id/slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ImageView>
+    <com.ncorti.slidetoact.SlideToActView
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:area_margin="4dp"
+        app:icon_margin="12dp"
+        app:animation_duration="250"
+        app:outer_color="@color/mauve"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_image"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:text="Slide to unlock"
+        app:text_size="12sp"
+        app:slider_height="50dp"
+        app:slider_locked="false" />
+
+
+
+
+</LinearLayout>
