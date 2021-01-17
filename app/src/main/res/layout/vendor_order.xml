@@ -11,28 +11,19 @@
         android:scaleType="centerCrop"
         android:src="@drawable/vendor" />
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/toggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="40dp"
-        android:thumb="@drawable/thumb"
-        app:showText="true"
-        app:track="@drawable/track" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="70dp"
             android:text="Order details as follows "
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/customer_address"
@@ -40,8 +31,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text=" "
-            android:textSize="25dp" />
+            android:text="bajarang nagar,kota"
+            android:textSize="25sp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/customer_phone"
@@ -49,14 +41,20 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="" />
+            android:text="12345678"
+            android:textSize="25sp"
+            android:textColor="@color/black"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/customer_name"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:text="SHREYA VIJAYVARGIYA"
+            android:textSize="25sp"
+            android:textColor="@color/black"/>
         <Button
+            android:id="@+id/yatra"
             android:layout_marginTop="200dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
