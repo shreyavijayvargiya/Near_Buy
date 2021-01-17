@@ -72,7 +72,7 @@ public class ProfileFragment extends Fragment {
          button.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 Intent intent = new Intent(getActivity(), crea_acc.class);
+                 Intent intent = new Intent(getActivity(), CreateAccActivity.class);
                  startActivity(intent);
 
              }
@@ -84,7 +84,7 @@ public class ProfileFragment extends Fragment {
                  mFirebaseAuth.signOut();
                  Toast.makeText(getActivity(),"signed out",Toast.LENGTH_SHORT).show();
 
-
+                 getActivity().finish();
              }
          });
 

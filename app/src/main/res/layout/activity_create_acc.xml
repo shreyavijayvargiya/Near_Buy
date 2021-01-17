@@ -22,7 +22,7 @@
             android:text="Welcome to nearbuy app"
             android:textAllCaps="true"
             android:gravity="center_horizontal"
-            android:textColor="#E91E63"
+            android:textColor="#004D40"
             android:textSize="24sp"
             android:textStyle="bold"
             />

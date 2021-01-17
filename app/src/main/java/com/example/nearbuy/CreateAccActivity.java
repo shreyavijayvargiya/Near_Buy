@@ -59,9 +59,6 @@ public class CreateAccActivity extends AppCompatActivity {
                 user = new User(name, mail, phone, address);
                 mUserDatabaseReference.push().setValue(user);
                 registerUser(name, mail);
-
-                Intent i = new Intent(getApplicationContext(), ProfileFragment.class);
-                startActivity(i);
             }
         });
 
@@ -73,12 +70,10 @@ public class CreateAccActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(CreateAccActivity.this, "Authentication failed.",
+                            Toast.makeText(CreateAccActivity.this, "Account Created!",
                                     Toast.LENGTH_SHORT).show();
                         }
 

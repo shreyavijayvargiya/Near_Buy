@@ -42,7 +42,7 @@
             android:text="Vendor\nविक्रेता"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="30dp"
             android:textStyle="bold"
             android:gravity="center"
             android:background="@drawable/bg_1"

@@ -17,11 +17,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link NearMeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class NearMeFragment extends Fragment  {
     private static final String MAPVIEW_BUNDLE_KEY = "";
     private MapView mMapView;

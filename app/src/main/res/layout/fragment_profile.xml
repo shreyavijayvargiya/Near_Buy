@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".ProfileFragment"
+    android:background="#FFF7DA">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:orientation="vertical">
 
         <TextView
@@ -18,22 +19,34 @@
             android:gravity="center"
             android:text="USER PROFILE"
             android:textColor="@color/black"
-            android:textSize="22dp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text=" Hi User !"
-            android:textSize="20dp" />
+            android:text="@string/welcome"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="@string/mail"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@color/black"/>
 
         <Button
             android:id="@+id/acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="250dp"
             android:background="@drawable/bg_1"
             android:text="Account"
             android:textSize="18dp" />
