@@ -21,6 +21,7 @@
         <activity android:name=".Vendor_order"/>
         <activity android:name=".CreateAccActivity"/>
         <activity android:name=".HomeActivity" />
+        <activity android:name=".for_switch"/>
         <activity android:name=".MainActivity"> </activity>
     </application>
 
