@@ -17,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".thanx"/>
+        <activity android:name=".Vendor_order"/>
         <activity android:name=".HomeActivity" />
         <activity android:name=".crea_acc" />
         <activity android:name=".MainActivity"></activity>
