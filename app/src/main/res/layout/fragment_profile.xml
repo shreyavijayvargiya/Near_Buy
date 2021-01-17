@@ -23,6 +23,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -32,12 +33,33 @@
             android:textColor="@color/black"/>
 
         <TextView
+            android:id="@+id/eMail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             android:text="@string/mail"
             android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/phoneNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textSize="20sp"
             android:fontFamily="sans-serif-condensed-light"
             android:textColor="@color/black"/>
 
@@ -49,7 +71,7 @@
             android:layout_marginTop="250dp"
             android:background="@drawable/bg_1"
             android:text="Account"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -59,7 +81,7 @@
             android:background="@drawable/bg_1"
             android:text="Logout"
             android:id="@+id/logout"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
 
 
     </LinearLayout>
