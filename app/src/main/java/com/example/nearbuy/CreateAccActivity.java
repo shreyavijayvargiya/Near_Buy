@@ -27,7 +27,6 @@ public class CreateAccActivity extends AppCompatActivity {
     private EditText editTextPhone;
     private EditText editTextAddress;
     private Button createbtn;
-
     private DatabaseReference mUserDatabaseReference;
     private FirebaseDatabase database;
     private  FirebaseAuth mAuth;
@@ -39,18 +38,15 @@ public class CreateAccActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_acc);
 
-        FirebaseDatabase mFirebaseDatabase = FirebaseDatabase.getInstance();
-        FirebaseAuth mFirebaseAuth = FirebaseAuth.getInstance();
-
+        database= FirebaseDatabase.getInstance();
+        mUserDatabaseReference = database.getReference("USER");
+        mAuth= FirebaseAuth.getInstance();
         editTextName = findViewById(R.id.name);
         editTextMail = findViewById(R.id.mail);
         editTextPhone = findViewById(R.id.phone);
         editTextAddress = findViewById(R.id.address);
-        createbtn = findViewById(R.id.create);
 
-        database= FirebaseDatabase.getInstance();
-        mUserDatabaseReference = database.getReference("USER");
-        mAuth= FirebaseAuth.getInstance();
+        createbtn = (Button) findViewById(R.id.create);
 
         createbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,8 +59,12 @@ public class CreateAccActivity extends AppCompatActivity {
                 user = new User(name, mail, phone, address);
                 mUserDatabaseReference.push().setValue(user);
                 registerUser(name, mail);
+
+                Intent i = new Intent(getApplicationContext(), ProfileFragment.class);
+                startActivity(i);
             }
         });
+
     }
 
     public void registerUser(String name, String mail){
@@ -89,28 +89,27 @@ public class CreateAccActivity extends AppCompatActivity {
     public void updateUI(FirebaseUser currentUser){
         String keyId= mUserDatabaseReference.push().getKey();
         mUserDatabaseReference.child(keyId).setValue(user);
-        Intent i = new Intent(this, ProfileFragment.class);
-        startActivity(i);
+
 
     }
 
-    private void validateInputs(String name, String mail, String phone, String address) {
+    private boolean validateInputs(String name, String mail, String phone, String address) {
         if (name.isEmpty()) {
             editTextName.setError("Name required");
             editTextName.requestFocus();
-            return;
+            return true;
         }
 
         if (mail.isEmpty()) {
             editTextMail.setError("Mail ID required");
             editTextMail.requestFocus();
-            return;
+            return true;
         }
 
         if (phone.isEmpty()) {
             editTextPhone.setError("Phone required");
             editTextPhone.requestFocus();
-            return;
+            return true;
         }
 
         if (address.isEmpty()) {
@@ -118,7 +117,8 @@ public class CreateAccActivity extends AppCompatActivity {
             editTextAddress.requestFocus();
         }
 
-
+      return false;
     }
+
 
 }
