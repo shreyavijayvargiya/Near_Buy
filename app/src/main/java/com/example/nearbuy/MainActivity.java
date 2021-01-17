@@ -25,14 +25,15 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-   TextView tv1, tv2;
+    TextView tv1, tv2;
+    private boolean mLocationPermissionGranted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tv1= findViewById(R.id.customer);
-        tv2= findViewById(R.id.vendor);
+        tv1 = findViewById(R.id.customer);
+        tv2 = findViewById(R.id.vendor);
 
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,11 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i2);
             }
         });
-
-
-
-
     }
-
 }
+
+
+
 

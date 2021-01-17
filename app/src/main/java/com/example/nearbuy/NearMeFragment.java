@@ -1,19 +1,31 @@
 package com.example.nearbuy;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link NearMeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class NearMeFragment extends Fragment {
+public class NearMeFragment extends Fragment  {
+    private static final String MAPVIEW_BUNDLE_KEY = "";
+    private MapView mMapView;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,7 +70,22 @@ public class NearMeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Button btn;
+        View view=inflater.inflate(R.layout.fragment_near_me, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_near_me, container, false);
+
+        btn= (Button) view.findViewById(R.id.confirm);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), thanx.class);
+                startActivity(intent);
+
+            }
+        });
+
+        return view;
     }
+
+
 }
