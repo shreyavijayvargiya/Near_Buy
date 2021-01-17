@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,7 +65,9 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_profile, container, false);
-        Button button;
+        Button button , button1;
+        FirebaseAuth mFirebaseAuth = FirebaseAuth.getInstance();
+
          button = (Button) view.findViewById(R.id.acc);
          button.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -72,6 +77,17 @@ public class ProfileFragment extends Fragment {
 
              }
          });
+         button1=(Button)view.findViewById(R.id.logout);
+         button1.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 mFirebaseAuth.signOut();
+                 Toast.makeText(getActivity(),"signed out",Toast.LENGTH_SHORT).show();
+
+
+             }
+         });
+
         return view ;
 
 

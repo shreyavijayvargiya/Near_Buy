@@ -6,45 +6,47 @@
     tools:context=".ProfileFragment">
 
     <LinearLayout
-        android:layout_marginTop="150dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
             android:text="USER PROFILE"
             android:textColor="@color/black"
             android:textSize="22dp"
-            android:layout_marginBottom="40dp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text=" Hi User !"
-            android:textSize="20dp"
-            android:layout_gravity="center_horizontal"/>
+            android:textSize="20dp" />
 
         <Button
-            android:layout_marginTop="150dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_1"
-            android:textSize="18dp"
-            android:layout_gravity="center_horizontal"
             android:id="@+id/acc"
-            android:text="Account" />
-
-        <Button
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_1"
             android:layout_gravity="center_horizontal"
-            android:textSize="18dp"
-            android:text="Logout"/>
+            android:layout_marginTop="150dp"
+            android:background="@drawable/bg_1"
+            android:text="Account"
+            android:textSize="18dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_1"
+            android:text="Logout"
+            android:id="@+id/logout"
+            android:textSize="18dp" />
 
 
     </LinearLayout>

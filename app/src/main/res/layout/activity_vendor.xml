@@ -2,12 +2,16 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/vendor"
         android:alpha="0.4"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <worker8.com.github.radiogroupplus.RadioGroupPlus
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -166,22 +170,17 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/radio6"/>
         </LinearLayout>
-        <Button
-            android:layout_marginTop="25dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Other "
-            android:id="@+id/add_other"
-            android:textStyle="italic"
-            android:background="@drawable/bg_3"/>
+
         <Button
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="italic"
             android:background="@drawable/bg_3"
+            android:id="@+id/submit"
             android:text="SUBMIT"/>
     </worker8.com.github.radiogroupplus.RadioGroupPlus>
+    </ScrollView>
 
 
 

@@ -52,7 +52,7 @@ public class CreateAccActivity extends AppCompatActivity {
         mUserDatabaseReference = database.getReference("USER");
         mAuth= FirebaseAuth.getInstance();
 
-        createbtn.setOnClickListener(new OnClickListener() {
+        createbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String name = editTextName.getText().toString().trim();
